@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web App Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="grid-container">
+    <!-- Header -->
+    <header class=".header">
+      <h1>YourApp</h1>
+      <div>
+        <!-- SVG Bell -->
+        <div id="notifications"></div>
+      </div>
+      <img src="" alt="user-profile" />
+      <h3>Josh Sullivan</h3>
+    </header>
+
+    <!-- Nav -->
+    <nav class="navigation">
+      <a href=""><img src="" alt="" /></a>
+      <a href=""><img src="" alt="" /></a>
+      <a href=""><img src="" alt="" /></a>
+      <a href=""><img src="" alt="" /></a>
+    </nav>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- Dashboard Header -->
+      <div class="main-header">
+        <h2>Dashboard</h2>
+        <div class="main-header-search">
+          <input type="search" placeholder="Search..." />
+        </div>
+      </div>
+      <!-- Alert Bar -->
+      <div class="alert" id="alert"></div>
+
+      <!-- Traffic General -->
+      <section class="traffic">
+        <!-- Traffic General Header -->
+        <div class="traffic-header">
+          <h3>Traffic</h3>
+          <ul class="traffic-nav">
+            <li class="traffic-nav-link">Hourly</li>
+            <li class="traffic-nav-link">Daily</li>
+            <li class="traffic-nav-link">Weekly</li>
+            <li class="traffic-nav-link">Monthly</li>
+          </ul>
+        </div>
+        <!-- Traffic General Content -->
+        <div class="widget-container-full">
+          <canvas id="traffic-chart"></canvas>
+          <img src="images/g1.png" alt="Test graphic 1" />
+        </div>
+      </section>
+
+      <!-- Traffic Bar -->
+      <section class="daily">
+        <h3>Daily Traffic</h3>
+        <div class="widget-container-half">
+          <canvas id="daily-chart"></canvas>
+          <img src="images/g2.png" alt="Test graphic 2" />
+        </div>
+      </section>
+
+      <!-- Traffic Doughnut -->
+      <section class="users">
+        <h3>Mobile Users</h3>
+        <div class="widget-container-half">
+          <canvas id="users-chart"></canvas>
+          <img src="images/g3.png" alt="Test graphic 3" />
+        </div>
+      </section>
+
+      <!-- Social Stats -->
+      <div class="social-stats">
+        <h3>Social Stats</h3>
+        <div class="social-container">
+          <div class="social-image"></div>
+          <div class="social-text">
+            <p>Twitter</p>
+            <p>10,345</p>
+          </div>
+        </div>
+        <div class="social-container">
+          <div class="social-image"></div>
+          <div class="social-text">
+            <p>Facebook</p>
+            <p>8,739</p>
+          </div>
+        </div>
+        <div class="social-container">
+          <div class="social-image"></div>
+          <div class="social-text">
+            <p>Google+</p>
+            <p>2,530</p>
+          </div>
+        </div>
+      </div>
+
+      <!--  New Members -->
+      <section class="members">
+        <h3>New Members</h3>
+        <div class="members-container">
+          <img src="" alt="" />
+          <div class="members-text">
+            <p>Victoria Chambers</p>
+            <a href="#">victoria.chambers80@example.com</a>
+          </div>
+          <p>10/15/15</p>
+        </div>
+      </section>
+
+      <!-- Recent Activity -->
+      <section class="activity">
+        <h3>Recent Activity</h3>
+        <div class="activity-container">
+          <img src="" alt="" />
+          <div class="activity-text">
+            <p>
+              Victoria Chambers commented on <strong>YourApp's SEO Tips</strong>
+            </p>
+            <p>4 hours ago</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Messaging -->
+      <section class="message">
+        <h3>Message User</h3>
+        <form class="widget-container">
+          <input
+            type="text"
+            placeholder="Search for user"
+            class="form-field"
+            id="userField"
+          />
+          <textarea
+            placeholder="Message for user"
+            class="form-area"
+            id="messageField"
+          ></textarea>
+          <button class="button-primary" id="send">Send</button>
+        </form>
+      </section>
+
+      <!-- Settings -->
+      <section class="settings">
+        <h3>Settings</h3>
+
+        <select class="form-field" id="timezone">
+          <option disabled selected>Select a Timezone</option>
+          <option>Eastern</option>
+          <option>Hawaii</option>
+          <option>Alaska</option>
+          <option>Pacific</option>
+          <option>Mountain</option>
+          <option>Central</option>
+        </select>
+        <div class="settings-button">
+          <button class="button-primary" id="save">Save</button>
+          <button class="button-disabled" id="cancel">Cancel</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
