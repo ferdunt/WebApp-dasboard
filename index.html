@@ -4,39 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web App Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/normalize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="grid-container">
-    <!-- Header -->
-    <header class=".header">
-      <h1>YourApp</h1>
-      <div>
-        <!-- SVG Bell -->
-        <div id="notifications"></div>
+    <!-- HEADER -->
+    <header class="header">
+      <h1><span>Your</span>App<sup>TM</sup></h1>
+
+      <div class="user">
+        <div class="bell">
+          <!-- SVG Bell -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <path
+              d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z"
+              fill="#fff"
+            />
+          </svg>
+
+          <div id="notifications"></div>
+        </div>
+        <div class="line"></div>
+        <img src="images/profile.jpg" alt="user-profile" />
+        <h3>Fernando Guisbert</h3>
       </div>
-      <img src="" alt="user-profile" />
-      <h3>Josh Sullivan</h3>
     </header>
 
-    <!-- Nav -->
+    <!-- NAV -->
     <nav class="navigation">
-      <a href=""><img src="" alt="" /></a>
-      <a href=""><img src="" alt="" /></a>
-      <a href=""><img src="" alt="" /></a>
-      <a href=""><img src="" alt="" /></a>
+      <a href="#">
+        <img src="icons/icon-dashboard.svg" alt="dashboard" class="icon-nav" />
+        <div class="nav-selected"></div>
+      </a>
+      <a href="#"
+        ><img src="icons/icon-members.svg" alt="members" class="icon-nav"
+      /></a>
+      <a href="#"
+        ><img src="icons/icon-visits.svg" alt="visits" class="icon-nav"
+      /></a>
+      <a href="#"
+        ><img src="icons/icon-settings.svg" alt="settings" class="icon-nav"
+      /></a>
     </nav>
 
-    <!-- Main -->
+    <!-- MAIN -->
     <main class="main">
       <!-- Dashboard Header -->
       <div class="main-header">
-        <h2>Dashboard</h2>
+        <h2 class="headline">Dashboard</h2>
         <div class="main-header-search">
           <input type="search" placeholder="Search..." />
         </div>
       </div>
+
       <!-- Alert Bar -->
-      <div class="alert" id="alert"></div>
+      <div class="alert" id="alert">
+        <!-- JS Here -->
+      </div>
 
       <!-- Traffic General -->
       <section class="traffic">
@@ -46,14 +70,15 @@
           <ul class="traffic-nav">
             <li class="traffic-nav-link">Hourly</li>
             <li class="traffic-nav-link">Daily</li>
-            <li class="traffic-nav-link">Weekly</li>
+            <li class="traffic-nav-link active">Weekly</li>
             <li class="traffic-nav-link">Monthly</li>
           </ul>
         </div>
+
         <!-- Traffic General Content -->
         <div class="widget-container-full">
           <canvas id="traffic-chart"></canvas>
-          <img src="images/g1.png" alt="Test graphic 1" />
+          <!-- <img src="images/g1.png" alt="Test graphic 1" /> -->
         </div>
       </section>
 
@@ -67,7 +92,7 @@
       </section>
 
       <!-- Traffic Doughnut -->
-      <section class="users">
+      <section class="mobile">
         <h3>Mobile Users</h3>
         <div class="widget-container-half">
           <canvas id="users-chart"></canvas>
@@ -76,7 +101,7 @@
       </section>
 
       <!-- Social Stats -->
-      <div class="social-stats">
+      <div class="social">
         <h3>Social Stats</h3>
         <div class="social-container">
           <div class="social-image"></div>
@@ -150,7 +175,6 @@
       <!-- Settings -->
       <section class="settings">
         <h3>Settings</h3>
-
         <select class="form-field" id="timezone">
           <option disabled selected>Select a Timezone</option>
           <option>Eastern</option>
