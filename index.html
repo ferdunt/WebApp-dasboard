@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web App Dashboard</title>
     <link rel="stylesheet" href="css/normalize.min.css" />
+    <link rel="stylesheet" href="css/toggle-switch.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="grid-container">
@@ -157,37 +158,93 @@
           </div>
         </div>
       </div>
+      <hr />
 
       <!--  New Members -->
       <section class="members">
-        <h3>New Members</h3>
+        <h3>NEW MEMBERS</h3>
         <div class="members-container">
-          <img src="" alt="" />
+          <img src="images/member-1.jpg" alt="Victoria Chambers" />
           <div class="members-text">
             <p>Victoria Chambers</p>
             <a href="#">victoria.chambers80@example.com</a>
           </div>
-          <p>10/15/15</p>
+          <p class="date">10/15/15</p>
+        </div>
+        <div class="members-container">
+          <img src="images/member-2.jpg" alt="Dale Byrd" />
+          <div class="members-text">
+            <p>Dale Byrd</p>
+            <a href="#">dale.byrd80@example.com</a>
+          </div>
+          <p class="date">10/15/15</p>
+        </div>
+        <div class="members-container">
+          <img src="images/member-3.jpg" alt="Dawn Wood" />
+          <div class="members-text">
+            <p>Dawn Wood</p>
+            <a href="#">dawn.wood80@example.com</a>
+          </div>
+          <p class="date">10/15/15</p>
+        </div>
+        <div class="members-container">
+          <img src="images/member-4.jpg" alt="Dan Oliver" />
+          <div class="members-text">
+            <p>Dan Oliver</p>
+            <a href="#">dan.oliver80@example.com</a>
+          </div>
+          <p class="date">10/15/15</p>
         </div>
       </section>
+      <hr />
 
       <!-- Recent Activity -->
       <section class="activity">
-        <h3>Recent Activity</h3>
+        <h3>RECENT ACTIVITY</h3>
         <div class="activity-container">
-          <img src="" alt="" />
+          <img src="images/member-1.jpg" alt="Victoria Chambers" />
           <div class="activity-text">
             <p>
-              Victoria Chambers commented on <strong>YourApp's SEO Tips</strong>
+              Victoria Chambers commented on <span>YourApp's SEO Tips</span>
             </p>
-            <p>4 hours ago</p>
+            <p class="time">4 hours ago</p>
           </div>
+          <p class="arrow">></p>
+        </div>
+        <div class="activity-container">
+          <img src="images/member-2.jpg" alt="Dale Byrd" />
+          <div class="activity-text">
+            <p>
+              Dale Byrd like the post <span>Facebook's Changes for 2020</span>
+            </p>
+            <p class="time">5 hours ago</p>
+          </div>
+          <p class="arrow">></p>
+        </div>
+        <div class="activity-container">
+          <img src="images/member-3.jpg" alt="Dawn Wood" />
+          <div class="activity-text">
+            <p>
+              Dawn Wood commented on <span>Facebook's Changes for 2020</span>
+            </p>
+            <p class="time">5 hours ago</p>
+          </div>
+          <p class="arrow">></p>
+        </div>
+        <div class="activity-container">
+          <img src="images/member-4.jpg" alt="Dan Oliver" />
+          <div class="activity-text">
+            <p>Dan Oliver posted <span>YourApp's SEO Tips</span></p>
+            <p class="time">1 day ago</p>
+          </div>
+          <p class="arrow">></p>
         </div>
       </section>
+      <hr />
 
       <!-- Messaging -->
       <section class="message">
-        <h3>Message User</h3>
+        <h3>MESSAGE USER</h3>
         <form class="widget-container">
           <input
             type="text"
@@ -198,15 +255,46 @@
           <textarea
             placeholder="Message for user"
             class="form-area"
+            rows="5"
             id="messageField"
           ></textarea>
-          <button class="button-primary" id="send">Send</button>
+          <button class="button-primary-send" id="send">SEND</button>
         </form>
       </section>
+      <hr />
 
       <!-- Settings -->
       <section class="settings">
-        <h3>Settings</h3>
+        <h3>SETTINGS</h3>
+        <!-- Toggle 1 -->
+
+        <label class="switch-light switch-candy switch" onclick="">
+          <input type="checkbox" />
+
+          <strong>
+            Send Email Notifications
+          </strong>
+
+          <span id="switch-main">
+            <span>ON</span>
+            <span>OFF</span>
+            <a></a>
+          </span>
+        </label>
+        <!-- Toggle 2 -->
+        <label class="switch-light switch-candy switch" onclick="">
+          <input type="checkbox" />
+
+          <strong>
+            Set Profile to Public
+          </strong>
+
+          <span id="switch-main">
+            <span>ON</span>
+            <span>OFF</span>
+            <a></a>
+          </span>
+        </label>
         <select class="form-field" id="timezone">
           <option disabled selected>Select a Timezone</option>
           <option>Eastern</option>
@@ -217,8 +305,8 @@
           <option>Central</option>
         </select>
         <div class="settings-button">
-          <button class="button-primary" id="save">Save</button>
-          <button class="button-disabled" id="cancel">Cancel</button>
+          <button class="button-primary-save" id="save">SAVE</button>
+          <button class="button-disabled" id="cancel">CANCEL</button>
         </div>
       </section>
     </main>
