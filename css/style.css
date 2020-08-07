@@ -10,6 +10,9 @@
   --selected-color: #81c98f;
   --bell-color: #85db81;
   --cancel-color: #b2b2b2;
+  --back-color: #fbfbfb;
+  --text-color: #8f8f8f;
+  --border-color: #dfdfdf;
 }
 
 /* General */
@@ -105,7 +108,6 @@ h3 {
 .nav-selected {
   border: 2px solid var(--selected-color);
   width: 5em;
-  /* height: 2px; */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -123,9 +125,143 @@ h3 {
   grid-template-rows: auto;
 }
 
+/* Dashboard Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headline {
+  width: 30%;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.main-header-search {
+  width: 70%;
+  text-align: right;
+  background-color: var(--back-color);
+  border-bottom-left-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.main-header-search input {
+  margin-top: 1em;
+  margin-right: 0.5em;
+  border-radius: 6px;
+  border-style: none;
+  padding: 0.5em;
+  border: 1px solid var(--border-color);
+}
+
+::placeholder {
+  color: var(--text-color);
+}
+
+/* Alert Bar  */
+/* TODO */
+
+/* Traffic General Content */
+.traffic,
+.daily,
+.mobile,
+.social {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.traffic-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.traffic-header h3 {
+  width: 30%;
+  font-weight: 900;
+  color: var(--text-color);
+  margin: auto 0;
+}
+
+.traffic-nav {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-weight: 900;
+}
+
+.traffic-nav li {
+  margin: auto 0;
+  padding: 10px;
+}
+
+.active {
+  background-color: var(--selected-color);
+  color: white;
+  border-radius: 30px;
+}
+
+/* Traffic Bar */
+
+hr {
+  width: 100%;
+  border-top: 1px solid #d8d8d8;
+}
+
+.daily h3,
+.mobile h3,
+.social h3 {
+  font-weight: 900;
+  color: var(--text-color);
+}
+
+/* Traffic Doughnut */
+
 .widget-container-full,
 .widget-container-half {
   width: 95vw;
+}
+
+/* Social */
+
+.social-container {
+  border: 1px solid #d8d8d8;
+  background-color: #fbfbfb;
+  margin-bottom: 1.5em;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-image {
+  width: 5em;
+  height: 5em;
+  background-color: var(--first-color);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-image svg {
+  width: 50%;
+}
+
+.social-text p {
+  margin: 0 30px;
+}
+
+.social-text .name {
+  color: var(--first-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.social-text .number {
+  color: #666;
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 45px;
 }
 
 /* Media Queries */
