@@ -1,0 +1,130 @@
+/* Media Queries */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas:
+      'header header'
+      'navigation main';
+  }
+
+  .main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .traffic,
+  .social,
+  .main-header,
+  .alert {
+    grid-column: 1 / span 2;
+  }
+
+  .daily,
+  .members,
+  .message {
+    grid-column: 1 / span 1;
+  }
+
+  .mobile,
+  .activity,
+  .settings {
+    grid-column: 2 / span 1;
+  }
+
+  .widget-container-full {
+    width: 89vw;
+  }
+
+  .widget-container-half {
+    width: 40vw;
+  }
+
+  /* Dashboard Header */
+  .headline {
+    width: 20%;
+  }
+
+  .main-header-search {
+    width: 80%;
+  }
+
+  .main-header-search input {
+    width: 50%;
+  }
+  /* Traffic General Content */
+  .traffic-nav {
+    justify-content: flex-end;
+  }
+
+  .traffic-header h3,
+  .daily h3,
+  .mobile h3,
+  .social h3,
+  .members h3,
+  .activity h3,
+  .message h3,
+  .settings h3 {
+    font-size: 14px;
+  }
+
+  .daily,
+  .mobile,
+  .members,
+  .activity,
+  .message,
+  .settings {
+    width: 90%;
+  }
+
+  /* Social Stats */
+  .social {
+    margin-top: 30px;
+  }
+
+  .social-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-container {
+    width: 30%;
+    padding: 10px;
+  }
+
+  .social-text p {
+    margin-left: 15px;
+    margin-right: 0;
+  }
+  .social-text .name {
+    font-size: 16px;
+  }
+
+  .social-text .number {
+    font-size: 40px;
+  }
+
+  /* Settings */
+  .switch {
+    margin-top: 0;
+    margin-bottom: 26px;
+  }
+
+  .switch strong {
+    width: 50%;
+  }
+
+  .active {
+    padding: 5px 10px !important;
+  }
+
+  .widget-container-full {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  hr {
+    display: none;
+  }
+}
+
+/* @media (min-width: 1024px) {
+} */

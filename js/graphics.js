@@ -39,8 +39,8 @@ let trafficOptions = {
     },
     layout: {
         padding: {
-            left: 10,
-            right: 40
+            // left: 10,
+            // right: 10
         }
     }
 }
@@ -55,7 +55,7 @@ let trafficChart = new Chart(trafficCanvas, {
 
 // ***************** Graphic #2 - Daily Chart *****************
 // Data - Daily Chart
-const dailyData = {
+let dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [{
         label: '# of Hits',
@@ -66,7 +66,7 @@ const dailyData = {
 };
 
 // Options - Daily Chart
-const dailyOptions = {
+let dailyOptions = {
     scales: {
         yAxes: [{
             ticks: {
@@ -78,11 +78,11 @@ const dailyOptions = {
         display: false
     },
     layout: {
-        padding: {
-            left: 10,
-            right: 40,
-            bottom: 30
-        }
+        // padding: {
+        //     left: 10,
+        //     right: 40,
+        //     bottom: 30
+        // }
     },
 }
 
@@ -95,7 +95,7 @@ let dailyChart = new Chart(dailyCanvas, {
 
 // ***************** Graphic #3 - Mobile Chart *****************
 // Data - Mobile Chart
-const mobileData = {
+let mobileData = {
     labels: ["Desktop", "Tablet", "Phones"],
     datasets: [{
         label: '# of Users',
@@ -110,7 +110,7 @@ const mobileData = {
 };
 
 // Options - Mobile Chart
-const mobileOptions = {
+let mobileOptions = {
     legend: {
         position: 'right',
         labels: {
@@ -121,11 +121,11 @@ const mobileOptions = {
         }
     },
     layout: {
-        padding: {
-            left: 10,
-            right: 40,
-            bottom: 30
-        }
+        // padding: {
+        //     left: 10,
+        //     right: 40,
+        //     bottom: 30
+        // }
     },
 }
 
