@@ -35,6 +35,14 @@ body {
     'main';
 }
 
+.widget-container-full {
+  width: 93vw;
+}
+
+.widget-container-half {
+  width: 90vw;
+}
+
 /* Header */
 .bell {
   width: 1.7em;
@@ -161,7 +169,11 @@ h3 {
 /* Alert Bar  */
 /* TODO */
 
-/* Traffic General Content */
+/* Separators General  */
+.mobile {
+  margin-bottom: 20px;
+}
+
 .traffic,
 .daily,
 .mobile,
@@ -170,10 +182,11 @@ h3 {
 .activity,
 .message,
 .settings {
-  width: 95%;
-  margin: 0 auto;
+  padding: 15px;
+  border-top: 1px solid #d8d8d8;
 }
 
+/* Traffic General Content */
 .traffic-header {
   display: flex;
   justify-content: space-between;
@@ -211,11 +224,6 @@ h3 {
 
 /* Traffic Bar */
 
-hr {
-  width: 99.5%;
-  border-top: 1px solid #d8d8d8;
-}
-
 .daily h3,
 .mobile h3,
 .social h3,
@@ -225,13 +233,6 @@ hr {
 .settings h3 {
   font-weight: 900;
   color: var(--text-color);
-}
-
-/* Traffic Doughnut */
-
-.widget-container-full,
-.widget-container-half {
-  width: 94vw;
 }
 
 /* Social */

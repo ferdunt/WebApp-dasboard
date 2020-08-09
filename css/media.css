@@ -30,12 +30,51 @@
     grid-column: 2 / span 1;
   }
 
+  .separator {
+    grid-column: 1 / span 2;
+  }
+
   .widget-container-full {
     width: 89vw;
   }
 
   .widget-container-half {
     width: 40vw;
+  }
+
+  /* Navigation */
+  .navigation {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .navigation a {
+    margin: 1em 0;
+    width: 100%;
+  }
+
+  .navigation a:first-child {
+    padding-right: 15px;
+  }
+
+  .icon-nav {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .nav-selected {
+    height: 3.5em;
+    width: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 15px;
+  }
+
+  .prueba {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
   }
 
   /* Dashboard Header */
@@ -50,6 +89,26 @@
   .main-header-search input {
     width: 50%;
   }
+
+  /* Separators General  */
+  .traffic {
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  .daily {
+    border-top: none;
+    border-right: 1px solid #d8d8d8;
+  }
+
+  .mobile {
+    border-top: none;
+  }
+
+  .members,
+  .message {
+    border-right: 1px solid #d8d8d8;
+  }
+
   /* Traffic General Content */
   .traffic-nav {
     justify-content: flex-end;
@@ -66,19 +125,7 @@
     font-size: 14px;
   }
 
-  .daily,
-  .mobile,
-  .members,
-  .activity,
-  .message,
-  .settings {
-    width: 90%;
-  }
-
   /* Social Stats */
-  .social {
-    margin-top: 30px;
-  }
 
   .social-group {
     display: flex;
@@ -102,6 +149,10 @@
     font-size: 40px;
   }
 
+  .activity-text {
+    font-size: 0.7em;
+  }
+
   /* Settings */
   .switch {
     margin-top: 0;
@@ -112,19 +163,21 @@
     width: 50%;
   }
 
+  .settings-button {
+    margin-top: 3px;
+  }
+
+  /* General */
+
   .active {
     padding: 5px 10px !important;
   }
-
-  .widget-container-full {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #d8d8d8;
-  }
-
-  hr {
-    display: none;
-  }
 }
 
-/* @media (min-width: 1024px) {
-} */
+@media (min-width: 1024px) {
+  /* Social Stats */
+  .members-text,
+  .activity-text {
+    font-size: 0.9em;
+  }
+}
