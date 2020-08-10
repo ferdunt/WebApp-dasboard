@@ -278,7 +278,7 @@
         <!-- Toggle 1 -->
 
         <label class="switch-light switch-candy switch" onclick="">
-          <input type="checkbox" />
+          <input type="checkbox" id="settingEmail" />
 
           <strong>
             Send Email Notifications
@@ -292,7 +292,7 @@
         </label>
         <!-- Toggle 2 -->
         <label class="switch-light switch-candy switch" onclick="">
-          <input type="checkbox" />
+          <input type="checkbox" id="settingProfile" />
 
           <strong>
             Set Profile to Public
@@ -305,13 +305,13 @@
           </span>
         </label>
         <select class="form-field" id="timezone">
-          <option disabled selected>Select a Timezone</option>
-          <option>Eastern</option>
-          <option>Hawaii</option>
-          <option>Alaska</option>
-          <option>Pacific</option>
-          <option>Mountain</option>
-          <option>Central</option>
+          <option disabled selected value="0">Select a Timezone</option>
+          <option value="1">Eastern</option>
+          <option value="2">Hawaii</option>
+          <option value="3">Alaska</option>
+          <option value="4">Pacific</option>
+          <option value="5">Mountain</option>
+          <option value="6">Central</option>
         </select>
         <div class="settings-button">
           <button class="button-primary-save" id="save">SAVE</button>
