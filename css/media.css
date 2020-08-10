@@ -80,6 +80,7 @@
   /* Dashboard Header */
   .headline {
     width: 20%;
+    padding-right: 15px;
   }
 
   .main-header-search {
@@ -175,9 +176,25 @@
 }
 
 @media (min-width: 1024px) {
+  .widget-container-full {
+    width: 93vw;
+  }
+
+  .widget-container-full {
+    margin: 0 auto;
+  }
+
   /* Social Stats */
   .members-text,
   .activity-text {
     font-size: 0.9em;
+  }
+
+  .main-header-search {
+    width: 85%;
+  }
+
+  .traffic-nav {
+    padding-right: 15px;
   }
 }
